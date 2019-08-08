@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>C语言学习归纳 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##C语言程序组成 #include&amp;lt;头文件&amp;gt;main函数 （函数参数）（在程序运行时候传入）代码块注释//库函数引用。  防头文件重复命令：#pragma oncegcc编译器的工作流程预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）代码命令：gcc -E test.c -o test.i编译：语法检测，将预处理过后的文件编译成汇编文件。代码命令：gc">
+  <meta name="description" content="C语言程序组成#include&amp;lt;头文件&amp;gt;main函数 （函数参数）（在程序运行时候传入）代码块注释//库函数引用。  防头文件重复命令：#pragma oncegcc编译器的工作流程预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）代码命令：gcc -E test.c -o test.i编译：语法检测，将预处理过后的文件编译成汇编文件。代码命令：gcc -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言学习归纳">
 <meta property="og:url" content="http://yoursite.com/2019/08/08/C语言学习归纳/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="##C语言程序组成 #include&amp;lt;头文件&amp;gt;main函数 （函数参数）（在程序运行时候传入）代码块注释//库函数引用。  防头文件重复命令：#pragma oncegcc编译器的工作流程预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）代码命令：gcc -E test.c -o test.i编译：语法检测，将预处理过后的文件编译成汇编文件。代码命令：gc">
+<meta property="og:description" content="C语言程序组成#include&amp;lt;头文件&amp;gt;main函数 （函数参数）（在程序运行时候传入）代码块注释//库函数引用。  防头文件重复命令：#pragma oncegcc编译器的工作流程预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）代码命令：gcc -E test.c -o test.i编译：语法检测，将预处理过后的文件编译成汇编文件。代码命令：gcc -">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-08T10:26:05.617Z">
+<meta property="og:updated_time" content="2019-08-08T10:29:03.776Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言学习归纳">
-<meta name="twitter:description" content="##C语言程序组成 #include&amp;lt;头文件&amp;gt;main函数 （函数参数）（在程序运行时候传入）代码块注释//库函数引用。  防头文件重复命令：#pragma oncegcc编译器的工作流程预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）代码命令：gcc -E test.c -o test.i编译：语法检测，将预处理过后的文件编译成汇编文件。代码命令：gc">
+<meta name="twitter:description" content="C语言程序组成#include&amp;lt;头文件&amp;gt;main函数 （函数参数）（在程序运行时候传入）代码块注释//库函数引用。  防头文件重复命令：#pragma oncegcc编译器的工作流程预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）代码命令：gcc -E test.c -o test.i编译：语法检测，将预处理过后的文件编译成汇编文件。代码命令：gcc -">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -174,32 +174,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##C语言程序组成</p>
-<p>#include&lt;头文件&gt;<br>main函数 （函数参数）（在程序运行时候传入）<br>代码块<br>注释//<br>库函数引用。  防头文件重复命令：#pragma once<br>gcc编译器的工作流程<br>预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）<br>代码命令：gcc -E test.c -o test.i<br>编译：语法检测，将预处理过后的文件编译成汇编文件。<br>代码命令：gcc -S test.i -o test.s<br>汇编：将汇编文件转化为二进制文件,-c小写<br>代码命令：gcc -c test.s -o test.o<br>链接：将各种库链接程序中.<br>代码命令：gcc test.o -o test.exe    //exe可以不写。默认exe<br>简易命令：一次性将c转化为exe命令<br>代码命令：gcc test.c -o test.exe<br>gcc 环境配置<br>找到 gcc.exe文件的所在目录，拷贝目录，找到系统变量中的path，添加，粘贴。</p>
-<h2 id="打开cmd-输如gcc-v测试是否成功"><a href="#打开cmd-输如gcc-v测试是否成功" class="headerlink" title="打开cmd,输如gcc -v测试是否成功"></a>打开cmd,输如gcc -v测试是否成功</h2><p>##函数</p>
-<p>4.1函数的组成：函数返回值类型—函数名称—参数—函数体<br>int func(int a)<br>{<br>  return a;<br>}<br>   返回值类型 函数名（形参） //没有调用时不使用内存的参数<br>   {<br>函数体<br>}<br>4.2调用函数的方式<br>func(x);<br>函数名（传入的参数名）；<br>函数知识<br>函数返回的地址都在栈中，函数结束时会被收回。所以不能返回地址。<br>函数可以使用地址形参改变实参数值。<br>4.3函数归纳：<br>4.3.1 printf(“”,a); 作用：输出双引号内的数据到控制台中。<br>     常用类型：“%d”整形、“%c”字符型、“%lf”浮点型、“%s”字符串<br>     scanf(“”,&amp;a);作用：从控制台中获取数据并写入到a变量的内存存储空间中。<br>     system(“pause”)作用：暂停程序；<br>     system(“asd.exe”)作用：启动程序<br>     sizeof(a)作用:计算为变量开辟的空间大小<br>     getchar(); 作用:   输入单个字符; char ch = getchar();<br>     putchar(); 作用:   输出单个字符; putchar(‘0’)<br>     字符串操作函数:<br>fgets(地址,读取长度,stdin) 作用:获取字符串简化版gets(char x)<br>     fputs(地址,stdout);//不换行.作用:输出字符串简化版puts()自动换行<br>     strlen(数组名)作用:计算字符个数,不包括\0<br>     strncpy(目标数组,被拷数组,字符数)作用:copy数组.简化版strcpy会把\0复制<br>     strncat(目标数组,被拷数组,字符数)作用,cpy是覆盖,这个是追加.<br>需要注意数组不要溢出<br>     strncmp(s1,s2,字符数)作用:对比字符串大小s1大就返1小就返-1相等返0.<br>     比较原理:从第一个字符开始比ACSII码,相等就比下一个直到比出结果.<br>     清空内存函数：memset(首地址，0，空间的大小)，头文件在string.h<br>memcpy函数：memcpy(目标首地址，源首地址，要拷贝的字节数量)；头文件在string.h<br>拆包函数sscanf<br>组包函数sprintf    </p>
-<h2 id="strchr-数组名-字符-strstr-数组名-字符串-作用-检索字符或字符串"><a href="#strchr-数组名-字符-strstr-数组名-字符串-作用-检索字符或字符串" class="headerlink" title="strchr(数组名,字符),strstr(数组名,字符串)作用:检索字符或字符串"></a>strchr(数组名,字符),strstr(数组名,字符串)作用:检索字符或字符串</h2><p>##数据类型</p>
-<p>主要数据类型：short(2字节) int（4个字节） long（4or8）            整形<br>char(1字节)  float(4个字节)  double(8个字节)       字符  浮点型</p>
+        <h2 id="C语言程序组成"><a href="#C语言程序组成" class="headerlink" title="C语言程序组成"></a>C语言程序组成</h2><p>#include&lt;头文件&gt;<br>main函数 （函数参数）（在程序运行时候传入）<br>代码块<br>注释//<br>库函数引用。  防头文件重复命令：#pragma once<br>gcc编译器的工作流程<br>预处理：展开宏定义、头文件，条件编译等提前操作。删除代码中的注释。（不检查语法）<br>代码命令：gcc -E test.c -o test.i<br>编译：语法检测，将预处理过后的文件编译成汇编文件。<br>代码命令：gcc -S test.i -o test.s<br>汇编：将汇编文件转化为二进制文件,-c小写<br>代码命令：gcc -c test.s -o test.o<br>链接：将各种库链接程序中.<br>代码命令：gcc test.o -o test.exe    //exe可以不写。默认exe<br>简易命令：一次性将c转化为exe命令<br>代码命令：gcc test.c -o test.exe<br>gcc 环境配置<br>找到 gcc.exe文件的所在目录，拷贝目录，找到系统变量中的path，添加，粘贴。<br>打开cmd,输如gcc -v测试是否成功</p>
+<hr>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>4.1函数的组成：函数返回值类型—函数名称—参数—函数体<br>int func(int a)<br>{<br>  return a;<br>}<br>   返回值类型 函数名（形参） //没有调用时不使用内存的参数<br>   {<br>函数体<br>}<br>4.2调用函数的方式<br>func(x);<br>函数名（传入的参数名）；<br>函数知识<br>函数返回的地址都在栈中，函数结束时会被收回。所以不能返回地址。<br>函数可以使用地址形参改变实参数值。<br>4.3函数归纳：<br>4.3.1 printf(“”,a); 作用：输出双引号内的数据到控制台中。<br>     常用类型：“%d”整形、“%c”字符型、“%lf”浮点型、“%s”字符串<br>     scanf(“”,&amp;a);作用：从控制台中获取数据并写入到a变量的内存存储空间中。<br>     system(“pause”)作用：暂停程序；<br>     system(“asd.exe”)作用：启动程序<br>     sizeof(a)作用:计算为变量开辟的空间大小<br>     getchar(); 作用:   输入单个字符; char ch = getchar();<br>     putchar(); 作用:   输出单个字符; putchar(‘0’)<br>     字符串操作函数:<br>fgets(地址,读取长度,stdin) 作用:获取字符串简化版gets(char x)<br>     fputs(地址,stdout);//不换行.作用:输出字符串简化版puts()自动换行<br>     strlen(数组名)作用:计算字符个数,不包括\0<br>     strncpy(目标数组,被拷数组,字符数)作用:copy数组.简化版strcpy会把\0复制<br>     strncat(目标数组,被拷数组,字符数)作用,cpy是覆盖,这个是追加.<br>需要注意数组不要溢出<br>     strncmp(s1,s2,字符数)作用:对比字符串大小s1大就返1小就返-1相等返0.<br>     比较原理:从第一个字符开始比ACSII码,相等就比下一个直到比出结果.<br>     清空内存函数：memset(首地址，0，空间的大小)，头文件在string.h<br>memcpy函数：memcpy(目标首地址，源首地址，要拷贝的字节数量)；头文件在string.h<br>拆包函数sscanf<br>组包函数sprintf<br>strchr(数组名,字符),strstr(数组名,字符串)作用:检索字符或字符串</p>
+<hr>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>主要数据类型：short(2字节) int（4个字节） long（4or8）            整形<br>char(1字节)  float(4个字节)  double(8个字节)       字符  浮点型</p>
 <p>类型转换：小转大（隐式转换）<br>大转小 ，有误差，需要强制转化。（数据类型）x<br>   常量：程序运行时不能改变的值（#define SIZE 50）(const修饰后的值)<br>   变量：声明变量： 数据类型 变量名 （=100）//定义<br>        变量名原则：不与关键字重名。主要由数字和字母组成，符号只能加下划线。数字不能开头，并且区分大小写。<br>进制转换<br>2转8<br>110010001110//3个3个隔开 … 110 010 001 110  变成 6 2 1 6  -&gt;6216<br>2转16<br>1110 0101 1100 0110//4个4个隔开 1110 0101 1100 0110 变成E 5 C 6-&gt;E5C6<br>8和16转2.  由以上逆推即可.<br>X(2,8,16)进制转10进制<br>   例如:1111<br>   1<em>(X^1)+1</em>(X^2)+1<em>(X^3)+1</em>(X^4)<br>10转2,8,16<br>除X取余.<br>//注释 8和16进制不能直接转.</p>
 <p>阅读码,由两种0,减法运算不准确<br>反码:原码的符号位不变取反(仅限负数)<br>补码:机器内的储存码.反码加一(仅限负数)</p>
 <p>  结构体：<br> 结构体是自定义数据类型，将多种数据整合在一起。<br>  联合体： 可以存储多种类型数据，但是只有一种能起作用。<br>  enmu枚举：函数在调用枚举中的存在的变量时可以直接使用枚举内的值。</p>
-<h2 id="typedef：-用于给数据类型重命名。"><a href="#typedef：-用于给数据类型重命名。" class="headerlink" title="typedef： 用于给数据类型重命名。"></a>typedef： 用于给数据类型重命名。</h2><p>##控制语句</p>
-<p>If（真即运行）<br>{<br>  运行代码<br>}<br>else if(条件)<br>else<br>{<br>  运行代码<br>}<br>1.1    while(真则运行)    (dowhile相同，dowhile会先执行一次)<br>{<br>  break;<br>}<br>       7.3三目运算符<br>       c=（a&gt;b?a:b）<br>1.2    switch<br>switch(a)<br>{<br> case ‘1’ :<br>func();<br>break;<br>            case ‘2’:<br>               func2();<br>               break;<br>             default :<br>                break;<br>}<br>1.3    for循环</p>
-<p>基本循环步骤：定义—判断—循环体循环一次—条件变动—判断<br>                        —循环体循环一次—条件变动—判断  一直循环<br>1.4    break continue<br>break 是直接结束当前所有循环</p>
-<h2 id="continue-是结束本次循环。"><a href="#continue-是结束本次循环。" class="headerlink" title="continue 是结束本次循环。"></a>continue 是结束本次循环。</h2><p>##数组</p>
-<p>8.1定义： 一群相同数据类型的数据集合。存储空间连续。便于归类传输。<br>       申请的空间一旦确定不可改变，变量名不能和数组名重复。</p>
+<p>typedef： 用于给数据类型重命名。</p>
+<hr>
+<h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><p>If（真即运行）<br>{<br>  运行代码<br>}<br>else if(条件)<br>else<br>{<br>  运行代码<br>}<br>1.1    while(真则运行)    (dowhile相同，dowhile会先执行一次)<br>{<br>  break;<br>}<br>       7.3三目运算符<br>       c=（a&gt;b?a:b）<br>1.2    switch<br>switch(a)<br>{<br> case ‘1’ :<br>func();<br>break;<br>            case ‘2’:<br>               func2();<br>               break;<br>             default :<br>                break;<br>}<br>1.3    for循环</p>
+<p>基本循环步骤：定义—判断—循环体循环一次—条件变动—判断<br>                        —循环体循环一次—条件变动—判断  一直循环<br>1.4    break continue<br>break 是直接结束当前所有循环<br>continue 是结束本次循环。</p>
+<hr>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>8.1定义： 一群相同数据类型的数据集合。存储空间连续。便于归类传输。<br>       申请的空间一旦确定不可改变，变量名不能和数组名重复。</p>
 <p>8.2代码： int array[3]={1,2,3}<br>       代表这是一个长度为3（容纳3个）的Int类型数组。<br>8.3数组长度单位计算：<br>        arr_length=sizeof(array)/sizeof(array[0])   (或*array)<br>8.4数组遍历</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(int i=0;i&lt;arr_length;i++)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="built_in">printf</span>(“%d”,array[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>   8.5数组array[0]为数组第一个数 ，数组名后面的字符成为数组的下标。下标等于数组第n个数减一。<br>//注释：多维数组<br>    array[3][2]_array[数组集合][元素集合]<br>    array[3][3][5]_array[数组集合的集合][数组集合][元素集合]<br>以此类推。<br>    二维数组：array2[i][j]<br>   遍历方式   for(遍历i)嵌套for(遍历array[j]数组)<br>   求二维数组数（x轴，也称为行数）<br>   line = sizeof(array2)/sizeof(array2[0]) 这个0是第一个[]里面的.取代i<br>   求二位数组每组元素个数<br>   account=sizeof(array2[0])/sizeof(array[0][0])<br>   总元素个数<br>   count=sizeof(array)/sizeof(array[0][0])<br>字符串数组：创建的时候是从常量区拷贝数组；<br>字符串常量：数据在常量区，所以无法更改<br>时间随机数的使用方法<br>第一步：引入时间头文件#include&lt;time.h&gt;<br>第二步：设置随机种子srand((unsigned int)time(NULL));<br>第三步：获取随机数 a=rand();   %100代表0-99内<br>c语言的字符串<br>c语言的字符串属于多个char字符组成的数组.属于数组字符的一种,</p>
-<h2 id="字符串由-‘-0’-或者数字0结尾"><a href="#字符串由-‘-0’-或者数字0结尾" class="headerlink" title="字符串由(‘\0’ 或者数字0结尾)"></a>字符串由(‘\0’ 或者数字0结尾)</h2><p>##指针</p>
-<p>指针： 使用指针可以获得高效率和利用更少储存空间的效果。<br>指针：指的是地址。<br>指针变量：一种变量类型，专门存储地址数据，大小为8（64位）/4（32位）个字节。<br>int * char *  double <em>都是标准的指针类型。<br>int *p = &a; 等于int *p;p=&a; 代表p存储了a的地址。</em>p则代表指向存储地址内的数据<br>     指针步长：p+1 的变化由数据类型决定<br>     野指针 ：通过非法手段获取的地址的指针。合法获取方式只有通过库函数和通过变量获取。<br>     空指针：指向NULL的指针。<br>   万能指针：void *可以存储任何变量类型的地址。但是使用的时候会报错，需要提前转换。<br>常量修饰指针： const int *p 修饰的是指向地址存储的数值。<br>               int *const p 修饰的是地址。<br>指针接数组的类型与数组类型相同。多维数组不能用多级指针接，要用数组指针接。<br>字符指针数组：{“123”，“345”，“456”}存储的是地址。</p>
+<p>   8.5数组array[0]为数组第一个数 ，数组名后面的字符成为数组的下标。下标等于数组第n个数减一。<br>//注释：多维数组<br>    array[3][2]_array[数组集合][元素集合]<br>    array[3][3][5]_array[数组集合的集合][数组集合][元素集合]<br>以此类推。<br>    二维数组：array2[i][j]<br>   遍历方式   for(遍历i)嵌套for(遍历array[j]数组)<br>   求二维数组数（x轴，也称为行数）<br>   line = sizeof(array2)/sizeof(array2[0]) 这个0是第一个[]里面的.取代i<br>   求二位数组每组元素个数<br>   account=sizeof(array2[0])/sizeof(array[0][0])<br>   总元素个数<br>   count=sizeof(array)/sizeof(array[0][0])<br>字符串数组：创建的时候是从常量区拷贝数组；<br>字符串常量：数据在常量区，所以无法更改<br>时间随机数的使用方法<br>第一步：引入时间头文件#include&lt;time.h&gt;<br>第二步：设置随机种子srand((unsigned int)time(NULL));<br>第三步：获取随机数 a=rand();   %100代表0-99内<br>c语言的字符串<br>c语言的字符串属于多个char字符组成的数组.属于数组字符的一种,<br>字符串由(‘\0’ 或者数字0结尾)</p>
+<hr>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p>指针： 使用指针可以获得高效率和利用更少储存空间的效果。<br>指针：指的是地址。<br>指针变量：一种变量类型，专门存储地址数据，大小为8（64位）/4（32位）个字节。<br>int * char *  double <em>都是标准的指针类型。<br>int *p = &a; 等于int *p;p=&a; 代表p存储了a的地址。</em>p则代表指向存储地址内的数据<br>     指针步长：p+1 的变化由数据类型决定<br>     野指针 ：通过非法手段获取的地址的指针。合法获取方式只有通过库函数和通过变量获取。<br>     空指针：指向NULL的指针。<br>   万能指针：void *可以存储任何变量类型的地址。但是使用的时候会报错，需要提前转换。<br>常量修饰指针： const int *p 修饰的是指向地址存储的数值。<br>               int *const p 修饰的是地址。<br>指针接数组的类型与数组类型相同。多维数组不能用多级指针接，要用数组指针接。<br>字符指针数组：{“123”，“345”，“456”}存储的是地址。</p>
 <ol start="2">
 <li>数据类型<br>普通局部变量，作用域：函数内，代码块内。生命周期：随函数或语句完成结束。<br>静态局部变量  作用域：与普通局部变量相同生命周期：随程序结束<br>//函数返回变量地址的时候不能返回普通局部变量，因为函数结束时普通局部变量的内存空间会被收回。</li>
 </ol>
 <p>普通全局变量，作用域：整个工程，同一工程的其他文件在使用的时候需要先使用extern声明一次。  生命周期：随程序结束<br>静态全局变量：作用域：整个工程。在main使用前已经分配空间并且初始化。<br>生命周期：随程序结束。</p>
-<h2 id="普通函数与静态函数的区别：作用域区别，普通函数作用整个工程，但是静态函数只作用于本文件。"><a href="#普通函数与静态函数的区别：作用域区别，普通函数作用整个工程，但是静态函数只作用于本文件。" class="headerlink" title="普通函数与静态函数的区别：作用域区别，普通函数作用整个工程，但是静态函数只作用于本文件。"></a>普通函数与静态函数的区别：作用域区别，普通函数作用整个工程，但是静态函数只作用于本文件。</h2><p>##内存</p>
-<p>13.1内存分区：{栈区，堆区，全局静态区，代码区}<br>栈区：先进后出，由系统回收，程序员申请。<br>堆区：由程序员申请和释放。谁申请谁释放。<br>全局静态区：存储全局变量，常量。静态变量。<br>代码区：存储函数等。</p>
+<p>普通函数与静态函数的区别：作用域区别，普通函数作用整个工程，但是静态函数只作用于本文件。</p>
+<hr>
+<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><p>13.1内存分区：{栈区，堆区，全局静态区，代码区}<br>栈区：先进后出，由系统回收，程序员申请。<br>堆区：由程序员申请和释放。谁申请谁释放。<br>全局静态区：存储全局变量，常量。静态变量。<br>代码区：存储函数等。</p>
 
       
 
